@@ -1,0 +1,40 @@
+.nav {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.nav__link {
+  font-size: 0.93rem;
+  color: #2b2a2c;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 2rem;
+  position: relative;
+}
+.nav__link:after {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: #2b2a2c;
+  z-index: 1;
+  top: 120%;
+  left: 50%;
+  transition: all 0.2s;
+}
+.nav__link:hover:not(.nav__link--btn):after {
+  width: 100%;
+  left: 0;
+}
+.nav__link--btn {
+  padding: 0.66rem 2rem;
+  border: 2px solid #2b2a2c;
+  border-radius: 20px;
+  transition: all 0.2s;
+}
+.nav__link--btn:hover {
+  background-color: #2b2a2c;
+  color: #fff;
+}

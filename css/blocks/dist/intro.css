@@ -1,0 +1,9 @@
+.intro__inner {
+  display: flex;
+}
+.intro__content {
+  width: 50%;
+}
+.intro__photo {
+  width: 50%;
+}
