@@ -3,12 +3,13 @@
 
 .works{
     padding: 2.8rem 0;
+    text-align: center;
 }
 
 .works__nav{
     display: flex;
     justify-content: center;
-    margin-bottom: 1.4rem;
+   
 }
 
 .works__nav-link{
@@ -25,10 +26,51 @@
 .portfolio{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -1rem;
+    margin: 0 -1rem 2.8rem;
+
 }
 
 .portfolio__col{
     flex-basis: 33.33333%;
-    padding: 1rem 1rem;
+    padding: 1rem;
 }
+
+.work{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 4px fade(#000, 25%);
+    transition: all .2s;
+    cursor: pointer;
+    &:hover{
+        box-shadow: 0 0 25px fade(#000, 25%);
+        transform: translate3d(-3px, -3px, 0);
+    }
+}
+
+.work__image{
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.work__content{
+    padding: 1rem 0.8rem;
+    margin: 0;
+}
+
+.work__cat{
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    color: @black;
+    text-transform: uppercase;
+}
+
+.work__title{
+    font-size: 1.06rem;
+    color: @black;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+}
+
