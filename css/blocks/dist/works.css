@@ -1,0 +1,26 @@
+.works {
+  padding: 2.8rem 0;
+}
+.works__nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.4rem;
+}
+.works__nav-link {
+  margin: 0 1.2rem;
+  font-size: 0.8rem;
+  color: rgba(43, 42, 44, 0.7);
+  text-decoration: none;
+}
+.works__nav-link:hover {
+  text-decoration: underline;
+}
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+.portfolio__col {
+  flex-basis: 33.33333%;
+  padding: 1rem 1rem;
+}

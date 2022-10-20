@@ -1,0 +1,34 @@
+// main: ../style.less
+@import "../vars";
+
+.works{
+    padding: 2.8rem 0;
+}
+
+.works__nav{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.4rem;
+}
+
+.works__nav-link{
+    margin: 0 1.2rem;
+    font-size: 0.8rem;
+    color: fade(@black, 70%);
+    text-decoration: none;
+    
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.portfolio{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.portfolio__col{
+    flex-basis: 33.33333%;
+    padding: 1rem 1rem;
+}
