@@ -1,15 +1,74 @@
 // main: ../style.less
 @import "../vars";
 
+.intro{
+    
+}
+
 .intro__inner{
     display: flex;
-
+    border-bottom: 1px solid fade(@gray, 30%);
+    padding-bottom: 120px;
+    padding-top: 103px;
+    background: url('../images/intro/symbols.png') right top no-repeat;
+    position: relative;
 }
 
 .intro__content{
     width:50%;
 }
 
-.intro__photo{
-    width:50%;
+.intro__suptitle{
+    font-size: 2.1rem;
+    color: @black;
+    font-weight: 200;
 }
+
+.intro__title{
+    font-size: 3rem;
+    color: @black;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.intro__text{
+    font-size: 1.2rem;
+    color: @black;
+    font-weight: 700;
+}
+
+.intro__photo{
+    height: 100%;
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+}
+
+.social{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    padding: 20px 0;
+    &.social__link:first-child{
+        margin-left: 0;
+    }
+    
+}
+
+.social__link{
+    color: @black;
+    text-decoration: none;
+    font-size: 2rem;
+    margin: 0 5px;
+    transition: all .2s;
+    &:hover{
+        color: red;
+    }
+}
+
+
+
+
+
+
