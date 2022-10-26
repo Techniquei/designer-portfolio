@@ -1,0 +1,70 @@
+// main: ../style.less
+@import "../vars";
+
+.footer{
+    background-color: @black;
+    padding: 1rem 0;
+    color: @gray-light;
+}
+
+.footer__inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__credits{
+    display: flex;
+}
+
+.footer__copyright{
+    display: flex;
+    align-items: center;
+    padding-right: 2rem;
+    margin-right: 1rem;
+    border-right: 3px solid #413F42;
+    font-size: 0.93rem;
+    line-height: 1;
+}
+
+.footer__social{
+    display: flex;
+    align-items: center;
+    
+    .social__link{
+        color: @gray-light;
+        font-size: 1.2rem;
+        margin-right: 1rem;
+    }
+}
+
+.footer__nav{
+    font-size: .94rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer__nav-link{
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: @gray-light;
+    margin-left: 1rem;
+    text-transform: uppercase;
+    &:hover{
+        text-decoration: underline;
+    }
+
+    &--btn{
+        border: 1px solid @gray-light;
+        border-radius: 20px;
+        padding: 0.5rem 1.4rem;
+        transition: all 0.2s;
+        line-height: 1.1;
+
+        &:hover{
+            text-decoration: none;
+            background-color: #bbbbcc;
+            color: @black;
+            border-color: #bbbbcc;
+        }
+    }
+}
