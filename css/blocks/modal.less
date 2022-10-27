@@ -1,0 +1,46 @@
+// main: ../style.less
+@import "../vars";
+
+.modal {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: fade(@black, 70%);
+}
+
+.modal__dialog{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    background-color: @white;
+    position: relative;
+}
+
+.modal__close{
+    position: absolute;
+    top: .9rem;
+    right: .9rem;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    &:hover{
+        transform: translateY(-2px);
+    }
+
+    i{
+        font-size: 34px;
+        text-align: center;
+        vertical-align: center;
+        color: @gray;
+    }
+ 
+    
+}
