@@ -35,3 +35,9 @@
   font-weight: 700;
   border-width: 2px;
 }
+.btn--thin {
+  min-width: 145px;
+  font-size: 0.8rem;
+  vertical-align: middle;
+  line-height: 0.7;
+}
