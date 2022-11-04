@@ -24,6 +24,129 @@ p {
 *::after {
   box-sizing: border-box;
 }
+/* Slider */
+.slick-slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.slick-list:focus {
+  outline: none;
+}
+.slick-list.dragging {
+  cursor: pointer;
+  cursor: hand;
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.slick-track {
+  position: relative;
+  left: 0;
+  top: 0;
+  display: block;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after {
+  content: "";
+  display: table;
+}
+.slick-track:after {
+  clear: both;
+}
+.slick-loading .slick-track {
+  visibility: hidden;
+}
+.slick-slide {
+  float: left;
+  height: 100%;
+  min-height: 1px;
+  display: none;
+}
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+.slick-slide img {
+  display: block;
+}
+.slick-slide.slick-loading img {
+  display: none;
+}
+.slick-slide.dragging img {
+  pointer-events: none;
+}
+.slick-initialized .slick-slide {
+  display: block;
+}
+.slick-loading .slick-slide {
+  visibility: hidden;
+}
+.slick-vertical .slick-slide {
+  display: block;
+  height: auto;
+  border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+  display: none;
+}
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+  z-index: 2;
+}
+.slick-dots li.slick-active button {
+  background-color: #fff;
+  border: 1px solid gray;
+}
+.slick-dots button {
+  width: 11px;
+  height: 11px;
+  padding: 0;
+  margin: 3px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  font-size: 0;
+  color: transparent;
+  background: gray;
+  cursor: pointer;
+}
+.slick-dots button .slick-active {
+  background-color: #fff;
+}
 /* Block */
 .container {
   width: 100%;
@@ -506,7 +629,7 @@ p {
   border-color: #bbbbcc;
 }
 .modal {
-  display: flex;
+  display: none;
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -524,6 +647,11 @@ p {
   padding: 2rem;
   background-color: #fff;
   position: relative;
+  transform: rotateX(90deg);
+  transition: transform 0.2s;
+}
+.modal__dialog--sm {
+  max-width: 900px;
 }
 .modal__close {
   z-index: 100;
@@ -553,7 +681,6 @@ p {
   font-size: 3rem;
   text-transform: uppercase;
   color: #2b2a2c;
-  text-align: center;
 }
 .modal__dialog {
   padding: 0 0;
@@ -734,6 +861,78 @@ p {
   background-color: #6a6968;
   transition: width 0.2s;
 }
+.contact {
+  display: flex;
+}
+.contact__left {
+  width: 47%;
+  padding: 2rem;
+}
+.contact__right {
+  width: 53%;
+  background: #2b2a2c url(http://placehold.jp/480x700.png) center no-repeat;
+}
+.modal__subtitle {
+  font-size: 1.08rem;
+  font-weight: 400;
+}
+.contact__info {
+  list-style: none;
+  margin: 2rem 0 3rem;
+  padding: 0;
+  font-size: 0.94rem;
+  color: #2b2a2c;
+  font-weight: 300;
+}
+.contact__info-item {
+  display: flex;
+  margin-bottom: 0.85rem;
+}
+.contact__info-item:last-child {
+  margin-bottom: 0;
+}
+.info__icon {
+  margin-right: 1rem;
+  vertical-align: middle;
+  font-size: 1.2rem;
+}
+.label {
+  font-size: 0.8rem;
+  color: #2b2a2c;
+  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 0.6rem;
+}
+.input,
+.text__area {
+  display: block;
+  width: 100%;
+  padding: 1.3rem 1.8rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  border: 1px solid #b6b6b6;
+  border-radius: 1.8rem;
+  transition: all 0.2s;
+  color: #2b2a2c;
+  resize: vertical;
+}
+.input:focus,
+.text__area:focus {
+  outline: none;
+  border-color: black;
+}
+.input::placeholder,
+.text__area::placeholder {
+  color: #2b2a2c;
+}
+.form__group {
+  margin-bottom: 1.5rem;
+}
+.form__group:last-child {
+  margin-bottom: 0;
+}
 .text-center {
   text-align: center;
 }
@@ -744,4 +943,13 @@ p {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+.upper {
+  text-transform: uppercase;
+}
+.hide {
+  display: none;
 }
