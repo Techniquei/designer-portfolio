@@ -7,7 +7,7 @@ $(function(){
         event.preventDefault();
         let cat = $(this).data('filter');
         console.log(cat)
-        $("[data-cat").each(function(){
+        $("[data-cat]").each(function(){
             let workCat = $(this).data('cat');
             if(cat == 'all'){
                 $(this).show();
